@@ -14269,29 +14269,21 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">import</span> <span class="nn">nltk</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">spacy</span>
-<span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
 <span class="kn">from</span> <span class="nn">nltk.tokenize.toktok</span> <span class="kn">import</span> <span class="n">ToktokTokenizer</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
 </pre></div>
 
      </div>
@@ -14302,7 +14294,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_source</span> <span class="o">=</span> <span class="s1">&#39;./data/Tweets.csv&#39;</span>
@@ -14375,7 +14367,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tweet_col</span> <span class="o">=</span> <span class="s1">&#39;tweet_id&#39;</span>
@@ -14418,7 +14410,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">remove_columns</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">keep_columns</span><span class="p">,</span> <span class="n">all_columns</span><span class="p">):</span>
@@ -14443,7 +14435,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">trimmed_df</span> <span class="o">=</span> <span class="n">remove_columns</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="n">text</span><span class="p">,</span> <span class="n">airline_sentiment</span><span class="p">],</span> <span class="n">all_cols</span><span class="p">)</span>
@@ -14484,7 +14476,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;first 5 rows&quot;</span><span class="p">)</span>
@@ -14536,7 +14528,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">strip_html</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -14575,7 +14567,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -14610,7 +14602,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># for some reason, this is the only way i could get stemming to work, I couldnt use the regular method that was given in the lecture b/c it kept throwing an error like it couldnt find it after loadin</span>
@@ -14637,7 +14629,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stemmed_df</span> <span class="o">=</span> <span class="n">cleaned_df</span>
@@ -14657,7 +14649,7 @@ max        44.000000
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -14731,10 +14723,10 @@ max        44.000000
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h6 id="a.-Use-CountVectorizer">a. Use CountVectorizer<a class="anchor-link" href="#a.-Use-CountVectorizer">&#182;</a></h6>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_all_tweets</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">text_col</span><span class="p">):</span>
@@ -14752,1033 +14744,10 @@ max        44.000000
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;virginamerica dhepburn say&#39;,
- &#39;virginamerica plus you have add commercial experience tacky&#39;,
- &#39;virginamerica do not today must mean need take another trip&#39;,
- &#39;virginamerica really aggressive blast obnoxious entertainment guest face little recourse&#39;,
- &#39;virginamerica really big bad thing&#39;,
- &#39;virginamerica seriously would pay flight seat do not play really bad thing fly va&#39;,
- &#39;virginamerica yes nearly every time fly vx ear worm will not go away&#39;,
- &#39;virginamerica really miss prime opportunity man without hats parody httpstcomwpggrezp&#39;,
- &#39;virginamerica well didntbut&#39;,
- &#39;virginamerica amazing arrived hour early you be good&#39;,
- &#39;virginamerica know suicide second lead cause death among teen&#39;,
- &#39;virginamerica pretty graphic much well minimal iconography&#39;,
- &#39;virginamerica great deal already think nd trip australia have not even go st trip yet p&#39;,
- &#39;virginamerica virginmedia i be fly fabulous seductive sky u take stress away travel httptcoahlxhhkiyn&#39;,
- &#39;virginamerica thanks&#39;,
- &#39;virginamerica sfopdx schedule still mia&#39;,
- &#39;virginamerica excited first cross country flight lax mco i have hear nothing great thing virgin america daystogo&#39;,
- &#39;virginamerica fly nyc sfo last week could not fully sit seat due two large gentleman either side help&#39;,
- &#39;fly virginamerica&#39;,
- &#39;virginamerica know would amazingly awesome bosfll please want fly&#39;,
- &#39;virginamerica first fare may three time carrier seat available select&#39;,
- &#39;virginamerica love graphic httptcoutgrrwaaa&#39;,
- &#39;virginamerica love hipster innovation feel good brand&#39;,
- &#39;virginamerica make bosla non stop permanently anytime soon&#39;,
- &#39;virginamerica guys mess seat reserved seat friend guy give seat away want free internet&#39;,
- &#39;virginamerica status match program apply three week call email response&#39;,
- &#39;virginamerica happen ur vegan food option least say ur site know will not able eat anything next hrs fail&#39;,
- &#39;virginamerica miss do not worry well together soon&#39;,
- &#39;virginamerica amazing can not get cold air vent vx noair worstflightever roast sfotobos&#39;,
- &#39;virginamerica lax ewr middle seat red eye noob maneuver sendambien andchexmix&#39;,
- &#39;virginamerica hi bke cool birthday trip can not add elevate cause enter middle name flight booking problem&#39;,
- &#39;virginamerica hours operation club sfo post online current&#39;,
- &#39;virginamerica help leave expensive headphone flight iad lax today seat one answer lf number lax&#39;,
- &#39;virginamerica await return phone call would prefer use online selfservice option&#39;,
- &#39;virginamerica great news america could start flight hawaii end year httptcorpzyfe via pacificbiznew&#39;,
- &#39;nice rt virginamerica vibe moodlight takeoff touchdown moodlitmonday sciencebehindtheexperience httptcoyounxtqp&#39;,
- &#39;virginamerica moodlighting way fly good experience ever cool calm moodlitmonday&#39;,
- &#39;virginamerica freddieawards do do good airline around hand&#39;,
- &#39;virginamerica book flight hawaii&#39;,
- &#39;virginamerica chat support work site httptcovhpgtdwpk&#39;,
- &#39;virginamerica view downtown los angeles hollywood sign beyond rain mountain httptcodwnfibtr&#39;,
- &#39;virginamerica hey first time flyer next week excite i be hard time get flight add elevate account help&#39;,
- &#39;virginamerica plz help win bid upgrade flight laxsea&#39;,
- &#39;virginamerica unused ticket move new city do not fly fly expire travelhelp&#39;,
- &#39;virginamerica flight leave dallas seattle time feb&#39;,
- &#39;virginamerica i be elevategold good reason rock&#39;,
- &#39;virginamerica dream httptcooadrfaoq httptcolwwdackhx&#39;,
- &#39;virginamerica wow blew mind&#39;,
- &#39;virginamerica ladygaga carrieunderwood last night tribute soundofmusic oscars ladygaga think carrieunderwood agree&#39;,
- &#39;virginamerica ladygaga carrieunderwood entertain&#39;,
- &#39;virginamerica flight way suppose take minute ago website still show time flight thank&#39;,
- &#39;virginamerica ladygaga carrieunderwood julie andrews way though ladygaga impressive carrieunderwood&#39;,
- &#39;virginamerica wish fly atlanta soon&#39;,
- &#39;virginamerica ladygaga carrieunderwood julie andrews hand&#39;,
- &#39;virginamerica flight leave dallas la february th&#39;,
- &#39;virginamerica hi i be excited lgadal deal i have try book since last week page never load thx&#39;,
- &#39;virginamerica know nee spotify stat guiltypleasure&#39;,
- &#39;virginamerica ladygaga carrieunderwood i be lady gaga amazing&#39;,
- &#39;virginamerica ladygaga carrieunderwood carrie&#39;,
- &#39;virginamerica new marketing song httpstcoflfulcbq let us know think&#39;,
- &#39;virginamerica ladygaga carrieunderwood julie andrews first lady gaga wowd last night carrie meh&#39;,
- &#39;virginamerica call week ago add flight elevatethey still have not show uphelp&#39;,
- &#39;virginamerica ladygaga carrieunderwood great go carrieunderwood&#39;,
- &#39;virginamerica ladygaga carrieunderwood sorry mary martin first&#39;,
- &#39;virginamerica ladygaga carrieunderwood love three really can not beat classic&#39;,
- &#39;virginamerica flight dal dca pm try check could status please&#39;,
- &#39;virginamerica heyyyy guyyyys trying get hour someone call please&#39;,
- &#39;virginamerica hi virgin i be hold minute early flight la nyc tonight early pm&#39;,
- &#39;virginamerica congrat win travelzoo award good deal airline us httptcokjiljaebv&#39;,
- &#39;virginamerica everything fine lose bag&#39;,
- &#39;virginamerica need change reservation virgin credit card nee modify phone waive change fee online&#39;,
- &#39;virginamerica email customer service team let know need track number&#39;,
- &#39;virginamerica hi book flight need add baggage&#39;,
- &#39;virginamerica airline awesome lax loft need step game dirty table floor httptcohyvrfhjht&#39;,
- &#39;virginamerica worry great ride new plane great crew airline like&#39;,
- &#39;virginamerica awesome fly y all sit morning way correct bill&#39;,
- &#39;virginamerica watch good student film country foot cmfatfeet httptcokekpdmgif&#39;,
- &#39;virginamerica first time fly different ratepolicy medium bag thank&#39;,
- &#39;virginamerica go customer service anyway speak human asap thank&#39;,
- &#39;virginamerica happen doom&#39;,
- &#39;virginamerica can not supp biz traveler like southwestair customer service like jetblue neverflyvirginforbusiness&#39;,
- &#39;virginamerica i have apply member inflight crew teamim interested flightattendant dreampath g&#39;,
- &#39;virginamerica you be best whenever begrudgingly use airline i be delay late flight&#39;,
- &#39;virginamerica interesting fly cancel flight next four flight plannedneverflyvirginforbusiness&#39;,
- &#39;virginamerica disappointing experience share every business traveler meet neverflyvirgin&#39;,
- &#39;virginamerica i be trouble add flight wife book elevate account help httptcopxhqoksr&#39;,
- &#39;virginamerica can not bring reservation online use flight booking problem code&#39;,
- &#39;virginamerica random q what s distribution elevate avatars bet kitty disproportionate share httptcoaptzpurop&#39;,
- &#39;virginamerica fly va life happen try change trip jperhi helpva home page let&#39;,
- &#39;virginamerica site back&#39;,
- &#39;virginamerica rnp yeah know&#39;,
- &#39;virginamerica hi get point elevate account recent flight add flight point account&#39;,
- &#39;virginamerica like tv interesting video disappoint cancel flightled flight flight go jfk saturday&#39;,
- &#39;virginamerica land lax hour late flight bag check business travel friendly nomorevirgin&#39;,
- &#39;virginamerica flight redirect&#39;,
- &#39;virginamerica website btw new website be not great user experience time another redesign&#39;,
- &#39;virginamerica can not check add bag website be not work i have try desktop mobile httptcoavyqdmpiy&#39;,
- &#39;virginamerica let scan passenger leave plane tell someone remove bag st class bin uncomfortable&#39;,
- &#39;virginamerica phone number can not find call flight reservation&#39;,
- &#39;virginamerica anyone anything today website useless one answer phone&#39;,
- &#39;virginamerica try add boy prince ressie sf thursday virginamerica lax httptcogsbjcgm&#39;,
- &#39;virginamerica must traveler miss flight late flight check bag miss morning appointment lose business sfolax&#39;,
- &#39;virginamerica check new music httptcomarcnocwzn&#39;,
- &#39;virginamerica how s direct flight fllsfo unexpected layover vegas fuel yet peep next buy vegas flight sneaky&#39;,
- &#39;virginamerica late flight bag check lose business miss flight apt three people flight exp&#39;,
- &#39;virginamerica amazing customer service raeann sf she s good customerservice virginamerica fly&#39;,
- &#39;virginamerica call service line hang awesome sarcasm&#39;,
- &#39;virginamerica site tripping i be try check i be get plain text version reluctant enter card info&#39;,
- &#39;virginamerica scheduled sfo dal flight today change th due weather look like flight still&#39;,
- &#39;virginamerica getaway deal may oneway lot cool city httptcotzzjhuibch cheapflights farecompare&#39;,
- &#39;virginamerica getaway deal may oneway lot cool city httptcorpdbpxwnd cheapflights farecompare&#39;,
- &#39;virginamerica getaway deal may oneway lot cool cities httptcobxiygt cheapflights farecompare&#39;,
- &#39;virginamerica getaway deal may oneway lot cool city httptcoqdljhsloi cheapflights farecompare&#39;,
- &#39;virginamerica great week&#39;,
- &#39;virginamerica come back phl already nee take us horrible cold pleasecomeback httptcoglxfwpnqh&#39;,
- &#39;virginamerica concerned fly plane need delay due tech stop&#39;,
- &#39;virginamerica best airline fly oneasy change reservationhelpful representative comfortable flying experience&#39;,
- &#39;virginamerica another rep kick butt naelah represent team beautifully thank&#39;,
- &#39;virginamerica beautiful frontend design right cool still book ticket bc backend secure&#39;,
- &#39;virginamerica love team run gate e las tonight wait delay flight keep thing entertaining&#39;,
- &#39;virginamerica use another browser brand reputation build tech response do not crossbrowser compatible website&#39;,
- &#39;virginamerica flight flight booking problem site totally folk problem&#39;,
- &#39;virginamerica like customer service min delay connect passenger seem long va&#39;,
- &#39;virginamerica thank outstanding nycjfk crew move mountain get home san francisco tonight&#39;,
- &#39;virginamerica absolute good team customer service ever every time fly i be delighted thank&#39;,
- &#39;virginamerica provide complimentary upgrade first class available seat&#39;,
- &#39;virginamerica need change flight that s schedule hour min wait time phone i be call intern help&#39;,
- &#39;virginamerica completely awesome experience last month bosla nonstop thank awesome flight depart time vabeatsjblue&#39;,
- &#39;virginamerica watch oscars jfksfo flight&#39;,
- &#39;virginamerica flight cancel flightled&#39;,
- &#39;virginamerica fail customer check process link tsa precheck&#39;,
- &#39;virginamerica fidifamilie us terrible airline give us hotel hotline number say sorry&#39;,
- &#39;virginamerica flight number sfo cabo san lucas arrive yet&#39;,
- &#39;virginamerica chrysichrysic assistance yesterday u cancel flightled flight give us hotel hotline shame&#39;,
- &#39;virginamerica another delay flight likingyoulessandless&#39;,
- &#39;virginamerica nee register service dog first class ticket sfo dull phone queue hour long pls advise&#39;,
- &#39;virginamerica rock make watch oscar flight redcarpet oscar oscars&#39;,
- &#39;virginamerica reallytallchris drop track httpstcozvpttrk&#39;,
- &#39;virginamerica always xoxo&#39;,
- &#39;virginamerica can not book seat flight buy even check create much anxiety frustrate&#39;,
- &#39;virginamerica you d think pay extra buck rt luggage may afford hire extra hand sfo lame&#39;,
- &#39;virginamerica best customer service rep world irmafromdallas take cake&#39;,
- &#39;virginamerica find us flt lax soon midnight monday would great customer service&#39;,
- &#39;virginamerica please provide status flight can not imagine time web indicate dude weather andor dallas&#39;,
- &#39;virginamerica amazing staff super helpful run waltdisneyworld princesshalf spoil comfort&#39;,
- &#39;virginamerica pay premium fly across country cancel flight flight offer check fee upgrade love sad face&#39;,
- &#39;virginamerica question possible book seat infant give option want seat&#39;,
- &#39;always together you be welcome rt virginamerica jessicajaymes you be welcome&#39;,
- &#39;virginamerica flight home dc sunset globe backtowinter back work refresh httptcovxvbctdlf&#39;,
- &#39;virginamerica do not understand nee dm give answer damage luggage policy&#39;,
- &#39;virginamerica mean do not policy destroy luggage&#39;,
- &#39;virginamerica special assistance travel alone w kids infant priority boarding&#39;,
- &#39;virginamerica thank check ticket purchase customer happy&#39;,
- &#39;virginamerica website ever come back online&#39;,
- &#39;virginamerica flight love field sfo definitely cancel flightle monday february&#39;,
- &#39;virginamerica flight lga dfw time&#39;,
- &#39;virginamerica drivers license expire little month fly friday morning use expire license&#39;,
- &#39;virginamerica problems flight booking problem web site keep give error contact phone phone minute wait&#39;,
- &#39;virginamerica reschedule cancel flightled flight online change button grey&#39;,
- &#39;virginamerica rang wait minute book ticket vendor fix site&#39;,
- &#39;virginamerica get flight tell todaychecked email tomorrow unacceptable&#39;,
- &#39;virginamerica flight lga cancel flighted stuck dallas call reschedule tell could get flight today&#39;,
- &#39;virginamerica do not pairing include red wine white offer redwineisbetter&#39;,
- &#39;virginamerica website&#39;,
- &#39;virginamerica site seem little wonked right may want look try two browser css httptcoqsqmmkf&#39;,
- &#39;virginamerica i be disappointed agent designate silver status check line dulles_airport close assist pasenger&#39;,
- &#39;virginamerica plans include austin dallas route topnews arab emirates httptcoaqzwecokk&#39;,
- &#39;virginamerica normal receive reply central baggage baggageissues smh&#39;,
- &#39;virginamerica logan airport wait checkin flight checkin desk open&#39;,
- &#39;virginamerica jump dallasaustin market dallas_new httptcoewwgigdx&#39;,
- &#39;virginamerica beat eps view take southwestair va luv investors business daily httptcoflwmgdahxu&#39;,
- &#39;virginamerica lister show monday&#39;,
- &#39;virginamerica begin dallasaustin flight april ketr httptcossuvwwkyhh&#39;,
- &#39;virginamerica congrats get business ewr sfolax fuck united fl sfoewr clincher&#39;,
- &#39;virginamerica apply week ago have not hear back i be fly week disappoint&#39;,
- &#39;virginamerica i d love know policy damage luggage&#39;,
- &#39;virginamerica thank follow&#39;,
- &#39;virginamerica many apology r bad airline do not even respond cudtomer&#39;,
- &#39;virginamerica shame va make people spend money strand city airlines landing jfk reimburse&#39;,
- &#39;virginamerica ttinac dm&#39;,
- &#39;virginamerica please flight sjc choice fly southwest vegas&#39;,
- &#39;virginamerica bad say take day via confirmation email inquire week claim week&#39;,
- &#39;virginamerica flight bos las tomorrow cancel flightled notification wait time hour rebook another airline&#39;,
- &#39;rt virginamerica you have meet match get status another airline upgrade restr httptcorhkamxvf httptcopyalebgkjt&#39;,
- &#39;virginamerica way fly elevate gold&#39;,
- &#39;virginamerica guys flights cmh&#39;,
- &#39;virginamerica lot apology throw customer seevery sad thank nothing bad airline ever&#39;,
- &#39;virginamerica flight stuff wrong nothing bad flight ever&#39;,
- &#39;virginamerica issue find miss item plane help find airport plane head next&#39;,
- &#39;virginamerica match americanairline status cool&#39;,
- &#39;virginamericayouve meet matchgot status another airline upgrade httptcohrdktqy asarco_es_ar&#39;,
- &#39;virginamerica trying book flight guy website will not let lose business&#39;,
- &#39;virginamerica suck&#39;,
- &#39;virginamerica thanks&#39;,
- &#39;virginamerica dmd issue persist&#39;,
- &#39;virginamerica never recd cancel flightlation notice leave w option fly ps drive la red eye mon w kid&#39;,
- &#39;virginamerica trying book flight site&#39;,
- &#39;virginamerica flights fly boston tomorrow need home cancel flightle flight do not anything&#39;,
- &#39;virginamerica stink flight cancel flight psp jfk notification ability rebook disappoint expect well&#39;,
- &#39;virginamerica love guy song dance high school dance revue&#39;,
- &#39;virginamerica website i be try check&#39;,
- &#39;virginamerica do thank quick response apparently fast sit hold&#39;,
- &#39;virginamerica nervous flight dc lax get cancel flightled tomorrow send dm help&#39;,
- &#39;virginamerica cool picture another virginamerica plane wing site httptcobagfdc&#39;,
- &#39;virginamerica keep great work&#39;,
- &#39;virginamerica goodness people love field amazing pressure texas beatstheothers crisis please fly ny&#39;,
- &#39;virginamerica thank great flight la boston pilots great job landing snow go back la seriously&#39;,
- &#39;virginamerica please get new york area monday afternoon&#39;,
- &#39;virginamerica thank much awesome support guy rock&#39;,
- &#39;virginamerica seats row do not recline mention website soreback&#39;,
- &#39;virginamerica flight delay hour la due mechanical problem handle like pro could tossed us free drink&#39;,
- &#39;virginamerica cancel flight flight today precipitation scare&#39;,
- &#39;virginamerica twitter team guy kill reschedule asap thank&#39;,
- &#39;virginamerica guy charge reschedule flight cancel flight refuse refund what s deal&#39;,
- &#39;virginamerica can not access website safari iphone seem work mac ipad need iphone add passbook&#39;,
- &#39;virginamerica ipad iphone click checkin link email receive hrs flight&#39;,
- &#39;virginamerica mobile site break show headerelevateusernumofpointsavailable number point will not let checkin&#39;,
- &#39;virginamerica really look forward flight let know reschedule diehardvirgin&#39;,
- &#39;virginamerica cancel flight flight vx one sec delay airport next cancel flightledgonna email call reschedule&#39;,
- &#39;virginamerica problem link email checkin thank&#39;,
- &#39;virginamerica change another airline get dc today united able land dc cost ugh&#39;,
- &#39;virginamerica look forward first flight today cancel flightle along subsequent one&#39;,
- &#39;virginamerica put great deal pdx las las pdx show love httptcoeniqgbuzj&#39;,
- &#39;virginamerica wish afford fly next friday go back home love everything airline&#39;,
- &#39;virginamerica go to deal dallas dc deal dc dallas sad&#39;,
- &#39;virginamerica bug report guy&#39;,
- &#39;virginamerica hold times call center bit much&#39;,
- &#39;virginamerica like httptcovpqemxuq&#39;,
- &#39;virginamerica site help&#39;,
- &#39;virginamerica good flight attendant ever httptcopxdelnql&#39;,
- &#39;awesome rt virginamerica watch nominate film foot meetthefleet oscars httptcodnstitrzwy&#39;,
- &#39;virginamerica thank much&#39;,
- &#39;virginamerica trying reset password email never arrive help&#39;,
- &#39;virginamerica airline base silicon valley disruption fcmostinnovative incubator fastcompanys httptcowulbcncr&#39;,
- &#39;virginamerica nicely do&#39;,
- &#39;virginamerica i be look forward watch oscar flight home tomorrow may even get something bubbly drink&#39;,
- &#39;virginamerica reason delay departure vx jfk afternoon&#39;,
- &#39;virginamerica todays flight palm spring ca jfk ny cancel flightled&#39;,
- &#39;virginamerica hahaha virginamerica guys amazing love guy&#39;,
- &#39;virginamerica sound like fun&#39;,
- &#39;virginamerica updates flight jfk lax&#39;,
- &#39;virginamerica spruce moose&#39;,
- &#39;virginamerica css site right please fix site unusable&#39;,
- &#39;virginamerica flight vegas boston today check online bag count do not register fix somehow&#39;,
- &#39;virginamerica classiq luv virgin america greetingz&#39;,
- &#39;virginamerica hi i be try checkin website work try different browser problem continue&#39;,
- &#39;virginamerica thank great customer service today help get travel sort&#39;,
- &#39;virginamerica thanks guys sweet route rockie airplanemodewason&#39;,
- &#39;virginamerica love music blast gate boston waiting flight sanfrancisco could get iced coffee&#39;,
- &#39;virginamerica passenger flt assault should not fly trust he s ban crew file report faanew&#39;,
- &#39;virginamerica current bug website show select departure city select destination city httptcosllyibevq&#39;,
- &#39;virginamerica luggage severely dentedmisse wheel come baggage claim san luggage agent miranda think be not help&#39;,
- &#39;virginamerica thank easy itinerary shift impend weather quick painless free&#39;,
- &#39;virginamerica you d love see girl inspire become pilot rt free woaw event march abq httptcorfxlvkgdh&#39;,
- &#39;virginamerica thank good time back vodkatonic entire flightsfo&#39;,
- &#39;virginamerica beat expectation share take santa cruz sentinel httptcoqmdqbaig&#39;,
- &#39;virginamerica plan start fly direct dal las&#39;,
- &#39;virginamerica big lovegratitudempower w httptcoagrkncpf werin oscars vipswagbags avalonhollywood httptcoybmbgsdhn&#39;,
- &#39;virginamerica you be great job add little luxuriesaesthetic improve air travel experience thank keep&#39;,
- &#39;virginamerica request window seat confirm window get stick middle seat good way treat silver member&#39;,
- &#39;virginamerica grand budapest hotel oscarscountdown&#39;,
- &#39;virginamerica miss newsvp next trip&#39;,
- &#39;virginamerica wtf pay direct flight purpose stop fuel exhaust frequent flier nothing inconvenience&#39;,
- &#39;virginamerica something wrong website safari iphone&#39;,
- &#39;virginamerica thanks gate check baggage full flight dfwlax give early boarding sweet&#39;,
- &#39;virginamerica already check page expire x&#39;,
- &#39;virginamerica boo refunding seat upgrade fee want buy first place&#39;,
- &#39;virginamerica shares rise q financial result usa today httptcolfspefey&#39;,
- &#39;virginamerica add pillow instead lieflat seat first class arm race httptcorgywjbbhm&#39;,
- &#39;virginamerica see&#39;,
- &#39;virginamerica way take advantage mayweatherpacquiao&#39;,
- &#39;virginamerica know i be fly virgin fight mayweatherpacquiao&#39;,
- &#39;virginamerica inflight team make experience amazing&#39;,
- &#39;virginamerica cut salt pepper shaker ever think guy can not get well httptcovckeulgj&#39;,
- &#39;virginamerica move seat notice well seat cabin select behind row select disappointed&#39;,
- &#39;virginamerica shares q result iol httptcoxzqegnef&#39;,
- &#39;virginamerica fav airline&#39;,
- &#39;virginamerica hot female pilot sweet dca sfo&#39;,
- &#39;guy go start fly paris virginamerica lizautter you be welcome&#39;,
- &#39;virginamerica policy flying surgery still wait answer tell doctor&#39;,
- &#39;virginamerica already contact central baggage send dm renttherunway charge dress lose suitcase help&#39;,
- &#39;virginamerica thank&#39;,
- &#39;virginamerica anything go website i have get lot error past minute&#39;,
- &#39;virginamerica think leave something plane yesterday callah&#39;,
- &#39;virginamerica need follow back order dm&#39;,
- &#39;virginamerica nee start fly kciairport&#39;,
- &#39;virginamerica tell check airline regulation first contact&#39;,
- &#39;virginamerica virginatlantic check flight sfo lax tell atlantic fly club gold get benefit&#39;,
- &#39;virginamerica husband order three drink via screen never come awesome&#39;,
- &#39;virginamerica soooo guy go leave seatbelt light flight barely call turbulence&#39;,
- &#39;virginamerica policy flying surgery&#39;,
- &#39;virginamerica post second consecutive fullyear net profit atwonline httptcotvbzbzvhg&#39;,
- &#39;virginamerica funny story website break miss javascript stylesheets checkin process dislike&#39;,
- &#39;virginamerica would love virgin like gopro&#39;,
- &#39;virginamerica result handily exceed forecast nytime httptcogonmrwemi&#39;,
- &#39;virginamerica applied position flylaxairport wonder guy receive application&#39;,
- &#39;virginamerica achieve second year profitability despite revenue pressure capa_aviation httptcozsuztnaijq&#39;,
- &#39;virginamerica give positive outlook see increase competition reuters httptcojeuodeyj&#39;,
- &#39;virginamerica i be try check ct flight tmm desktop website work sort cache bug sos&#39;,
- &#39;virginamerica weather delay next week jfk bos dca&#39;,
- &#39;virginamerica madbee check website go airport&#39;,
- &#39;virginamerica guy know checkin link email broken httptconpxbobmr&#39;,
- &#39;virginamerica pilot say expect choppy landing nyc due gusty wind wa temperature degree wthe windchill&#39;,
- &#39;virginamerica love can not wait monday return flight mostly watch inflight safety video sorrynotsorry&#39;,
- &#39;virginamerica lose luggage day ago flight vx lax iad i be call every day responseplease give back stuff&#39;,
- &#39;virginamerica flight booking problem section website seem broken chrome may wanna look&#39;,
- &#39;virginamerica hi want see new route plan year newark love fly guy hope&#39;,
- &#39;virginamerica mean probably inappropriate board&#39;,
- &#39;virginamerica happy spend day together let&#39;,
- &#39;virginamerica saving sanity right httptcoeltboljul&#39;,
- &#39;virginamerica miss flight standby work&#39;,
- &#39;virginamerica understanding help thx comps&#39;,
- &#39;virginamerica bring way across country today see httptcotkauygcpms&#39;,
- &#39;virginamerica thank absolutely&#39;,
- &#39;virginamerica look like broken link asset httpstcooardjjgrrd&#39;,
- &#39;virginamerica ready let say together noooo turbulence today&#39;,
- &#39;virginamerica manage itinerary section website seem broken httpstcopujvcelng&#39;,
- &#39;virginamerica can not check site look like every time load httptcokacyawdbw&#39;,
- &#39;virginamerica u help freyabevan_fund need urgent treatment iny old battling cancer could u help flight freyasfund&#39;,
- &#39;virginamerica may start service hawaii sanfrancisco year httptcoyponyprzl biztravel&#39;,
- &#39;virginamerica carriers less half price round trip fare stun httptcoukdjjijrow&#39;,
- &#39;virginamerica wtf happen pdx late flight march one way sfo&#39;,
- &#39;virginamerica add dtw i be sell&#39;,
- &#39;virginamerica free drink flight back free promo&#39;,
- &#39;virginamerica ssal thank&#39;,
- &#39;virginamerica momma make&#39;,
- &#39;virginamerica please contact portfolio leave flight vx jfk sfo tonite seat need return call&#39;,
- &#39;virginamerica help flight jkf tonight seat c leave portfolio need back&#39;,
- &#39;virginamerica shrinerack seattle bind wifey get duffle vday she s keep holla httptcojloiblnair&#39;,
- &#39;virginamerica luggage go i have file paperwork promise callemail still resolution response central luggage&#39;,
- &#39;virginamerica debbie baldwin give rockstar performance safety demo evening vx lassfo bestcrew sherock&#39;,
- &#39;virginamerica thanks&#39;,
- &#39;virginamerica thank take care suuperg flight rockstar travel&#39;,
- &#39;virginamerica thank lovely soft view travel san sfo httptcocnctlgef&#39;,
- &#39;virginamerica request mileage challenge status several week ago online have not hear back get help&#39;,
- &#39;virginamerica try book ticket nyc face super fun broken styling do not worry ill keep try&#39;,
- &#39;virginamerica many thank follow ourprincess freyasfund usa bandie look help httptcoujfszikd&#39;,
- &#39;virginamerica nice lofty view flylaxairport silverstatus httptcoftpdawbd&#39;,
- &#39;virginamerica apply status match feb get confirmation email day still news though guy drop ball late flightly&#39;,
- &#39;virginamerica new go airline&#39;,
- &#39;virginamerica virginatlantic gma americanair help ourprincess nee help usa httptcoaztdaer&#39;,
- &#39;virginamerica adore look forward flight austin two week&#39;,
- &#39;virginamerica glad mentioned take first virgin flight year back transformative experience&#39;,
- &#39;virginamerica flight booking problem flight uphold status match taxis ticket count earn status point statusmatch virginamerica&#39;,
- &#39;virginamerica trying checkinbut look like site&#39;,
- &#39;virginamerica spending birthday night daldca get home&#39;,
- &#39;virginamerica send couple message email provide avail try next year cheer&#39;,
- &#39;virginamerica first time fly virgin go sanfrancisco thank smooth ride easily new fav airline&#39;,
- &#39;virginamerica seriously though direct flight sfofll may&#39;,
- &#39;virginamerica fine already do purchase try go way go back&#39;,
- &#39;virginamerica really experience hope ws force check small carry w nothing empty cabin space board&#39;,
- &#39;virginamerica wjere luggage slow lax&#39;,
- &#39;virginamerica jump dallas austin market httptcoszrpioa&#39;,
- &#39;virginamerica speak representative offer solution loyal customer fly virginatlantic well&#39;,
- &#39;virginamerica deeply disappoint birthday promo apply trip book mere day receive email&#39;,
- &#39;virginamerica happen direct flight sfofll look may see connect help dontdothistome&#39;,
- &#39;virginamerica help leave blazer kooples jacket bag rd row second seat right gate lax flight sfo&#39;,
- &#39;virginamerica partners visa checkout mobile payment method help boost mobile conversion rate etailw payment visa&#39;,
- &#39;virginamerica promote product problem southwest recommend noneother well httptcotfanxbhcf&#39;,
- &#39;virginamerica love guy pls get direct route las aus&#39;,
- &#39;virginamerica would like help flight please&#39;,
- &#39;bruh virginamerica giannilee turn vxsafetydance&#39;,
- &#39;virginamerica course work virginatlantic i be obsess entire virgin family&#39;,
- &#39;virginamerica ok first time fly tonight&#39;,
- &#39;virginamerica dig swanky pink mood lighting flight nyc sfo need cabaret singer think&#39;,
- &#39;virginamerica do need receipt asap could please help&#39;,
- &#39;virginamerica emboss badges patch superior one currently use httptcofqxelbon&#39;,
- &#39;virginamerica vx jfk la dirty plane standard&#39;,
- &#39;virginamerica flight vx head la jfk dirtiest va plane ever sad great airline&#39;,
- &#39;virginamerica get square away someone pick soon tweet tweet soon&#39;,
- &#39;virginamerica avis rental continue button do not work website book car try time phone suck&#39;,
- &#39;virginamerica delay&#39;,
- &#39;virginamerica currently minute hold cust service need anything add lap child reservation&#39;,
- &#39;virginamerica add pillow instead lieflat seat first class arm race httptcosfjduahxz skift&#39;,
- &#39;virginamerica karinslee course fun celebrate thank happy chinese new year&#39;,
- &#39;virginamerica flight booking problem last second flight next week sfo san chance want gift promo code since love guy&#39;,
- &#39;virginamerica comenity bank joke please change nothing constant problem bank&#39;,
- &#39;virginamerica dm u also add&#39;,
- &#39;virginamerica grandma ellas th would bday greet flight crew stewardess eastern airlines&#39;,
- &#39;virginamerica buy tix atx dallas route thank add love yr airline yr website good transactional site ever&#39;,
- &#39;virginamerica anytime sugafly&#39;,
- &#39;virginamerica give credit late flight flight yesterday great service that s wow moment unexpected gesture&#39;,
- &#39;virginamerica need receipt flight change send one&#39;,
- &#39;virginamerica submit status match request back still have not hear i be fly monday look accelerate&#39;,
- &#39;virginamerica safety video httptcocqmmnuem love first cross country flight livewelltravele sytycd&#39;,
- &#39;virginamerica do not look fat look yummy&#39;,
- &#39;virginamerica ceo say southwest jetblue stray low cost model httptcosctomh&#39;,
- &#39;virginamerica brilliant brisk boston cue vx httptcormznivgmg&#39;,
- &#39;virginamerica atlantic ploughs lone furrow middleeast httptcofvudmhpf thenationaluae&#39;,
- &#39;virginamerica atlantic ploughs lone furrow middleeast httptcodcoboknee thenationaluae&#39;,
- &#39;virginamerica atlantic ploughs lone furrow middleeast httptcovwpttlh thenationaluae&#39;,
- &#39;virginamerica omg omg nonstop dallas austin virgin&#39;,
- &#39;virginamerica plane really pretty think u know&#39;,
- &#39;virginamerica fly hawaii&#39;,
- &#39;virginamerica i be pull hair try book flight u site do not work iphone ipaddont computer help&#39;,
- &#39;virginamerica thank&#39;,
- &#39;virginamerica get help support ticket day incident thank&#39;,
- &#39;virginamerica good home texas moodlighte httptconbvztyzi&#39;,
- &#39;virginamerica can not even open laptop seat c pay premium let&#39;,
- &#39;virginamerica seat c can not even open laptop pay extra seat&#39;,
- &#39;virginamerica guy start flight end month guess i be still road tripping feb&#39;,
- &#39;virginamerica thank need way make austin trip dca you have come&#39;,
- &#39;virginamerica announce new route austin wfares way httptcogapbamuc&#39;,
- &#39;virginamerica really sprint think guy kewl _&#39;,
- &#39;virginamerica cool never ur plane&#39;,
- &#39;virginamerica dollar laxlas fare&#39;,
- &#39;virginamerica great well deserved&#39;,
- &#39;virginamerica fyi infovirginamericacom email address say contact password reset email do not exist email bounce&#39;,
- &#39;virginamerica status match week go newsflt next week hope flt count towards requirement cust svc help&#39;,
- &#39;virginamerica website suck donkey dick think know good&#39;,
- &#39;virginamerica still develop app favorite airline&#39;,
- &#39;virginamerica crap channel pay watch uk tv&#39;,
- &#39;virginamerica get set thank&#39;,
- &#39;virginamerica channel year&#39;,
- &#39;virginamerica thing see passbook virgin mobile mexico integrate&#39;,
- &#39;virginamerica giants virgin america match make heaven&#39;,
- &#39;virginamerica thank goodness also see friday nwksf boom&#39;,
- &#39;virginamerica come do not iphone app still use make waste paper&#39;,
- &#39;virginamerica back seat entertainment system accept credit card apostrophe surname apostrophefail&#39;,
- &#39;virginamerica vx use lga slot instead today add aus make less likely&#39;,
- &#39;virginamerica help step tinder game tindertip tinderchamp httptcojbmvvhaa&#39;,
- &#39;virginamerica luv ur people product thing u charge herbal tea black tea i be caffeine drinker&#39;,
- &#39;virginamerica thank see y all soon i be excited see expansion destination spread wing&#39;,
- &#39;virginamerica announce new nonstop connect austinairport dallaslovefield intro httptcoqxnoaqtyn httptcojkqmdfqgf&#39;,
- &#39;virginamerica add austindallas love field route httptcoxwjolflh httptcoyaormfkac&#39;,
- &#39;virginamerica sad learn long fly sfo phl hope return&#39;,
- &#39;virginamerica tweet cancel flightchng fee flight rebook one affiliate afiliate&#39;,
- &#39;virginamerica incredible customer service i have ever experience refreshing&#39;,
- &#39;virginamerica see virginamerica come philadelphia phl&#39;,
- &#39;virginamerica dream really open route dallas austin mean houston may next&#39;,
- &#39;virginamerica omg finally&#39;,
- &#39;virginamerica start xweekly flights dallas dallaslovefield austin apr avgeek&#39;,
- &#39;virginamerica nice see expand texas do not forget us sandiego would love see flight&#39;,
- &#39;virginamerica kinda suck earphone jack do not work flight may want look future passenger&#39;,
- &#39;virginamerica poor experience first computer problem seat malfunction stuck miss meeting san diego&#39;,
- &#39;virginamerica battle southwestair dallaslovefieldaustinairport route httptcorlzebkx via usatoday&#39;,
- &#39;virginamerica thankyou dalaus route make day&#39;,
- &#39;virginamerica awesome deals dalaus way httpstcoxcvqxykg&#39;,
- &#39;virginamerica miss nerdbird san jose&#39;,
- &#39;virginamerica love take southwestair backyard consumer win biz compete&#39;,
- &#39;virginamerica fly love austin excellent news&#39;,
- &#39;virginamerica make every vx plane nerdbird austin one get nerd love&#39;,
- &#39;virginamerica please add frequency pdx portland&#39;,
- &#39;virginamerica congrats vx new route&#39;,
- &#39;virginamerica try offer charge additional k new ticket strand thurs st time last time&#39;,
- &#39;virginamerica americanair u help flight get old battling cancer need treatment freyabevan_fund&#39;,
- &#39;virginamerica never bad experience one take cake extortion carry item well&#39;,
- &#39;virginamerica spend hour worrying item carryon would brokenstolen since could not carry plane lock bag&#39;,
- &#39;virginamerica group e tell room bin get plane room least bag row&#39;,
- &#39;virginamerica thank make flight lax jfk nightmare forcing check carry bag gate&#39;,
- &#39;virginamerica lot flight book site work i have phone waiting minute&#39;,
- &#39;virginamerica flight artisanal cheese wine pair&#39;,
- &#39;virginamerica virgin america fly direct seattle nyc boston&#39;,
- &#39;virginamerica that s classy&#39;,
- &#39;virginamerica i be sure lot jfklhr flight go lot fast mph strong tailwind&#39;,
- &#39;virginamerica tminus minute elevate silver upgrade window open freeneversuck&#39;,
- &#39;virginamerica save tomorrow&#39;,
- &#39;virginamerica take year fly home dallas get shit together&#39;,
- &#39;virginamerica jezziegoldz club virgin bump new york httptcohaqcgdgc&#39;,
- &#39;virginamerica jezziegoldz would rough trip luckily virginamerica flight weather&#39;,
- &#39;virginamerica thestarter&#39;,
- &#39;virginamerica please come minneapolis st paul&#39;,
- &#39;virginamerica yes fyi bff&#39;,
- &#39;virginamerica another perfect flight come plane sun visor stay carrier make raise&#39;,
- &#39;nice rt virginamerica man steel may fast wifi say sciencebehindtheexperience httptcofgrbpazsix&#39;,
- &#39;virginamerica love dance little richard cool beans&#39;,
- &#39;virginamerica do not use passbook still love though ill use email future&#39;,
- &#39;virginamerica thank free birthday point y all right&#39;,
- &#39;virginamerica application ios look see virgin mexico&#39;,
- &#39;virginamerica man steel fly city thoughand frequency&#39;,
- &#39;virginamerica thank much share add site httptcotsvibtvth&#39;,
- &#39;virginamerica good point&#39;,
- &#39;virginamerica hear virgin mobile hotspot&#39;,
- &#39;virginamerica get cheese plate flight&#39;,
- &#39;virginamerica flights&#39;,
- &#39;virginamerica dad segway good part whole infographic&#39;,
- &#39;virginamerica plan short haul airline europe would defiantly fly guy&#39;,
- &#39;virginamerica wifi well seating&#39;,
- &#39;virginamerica come abc one network channel do not&#39;,
- &#39;virginamerica start flight scold use overhead bin offer person seat next&#39;,
- &#39;virginamerica great return call day could not ask myvxexperience&#39;,
- &#39;virginamerica airlines be not cancel flight flight bos help customer get home virgin say good luck&#39;,
- &#39;virginamerica dear virgin customer you be strand sf day cost well least accommodate&#39;,
- &#39;virginamerica use next airline commercial lol httptcopxexilsjbs&#39;,
- &#39;virginamerica group virgin other bos weather expose actual cus serv model never flight booking problem virgin&#39;,
- &#39;virginamerica one traveler affect boston storm i be shock virgin complete apathy toward customer&#39;,
- &#39;virginamerica umm reason someone different contact contact get definitive answer&#39;,
- &#39;virginamerica try make change advance hour priortrie online early want change fee&#39;,
- &#39;virginamerica loyal i be drive nyc pa fly virgin since cut philly flight&#39;,
- &#39;virginamerica way change main cabin main cabin select flight without pay change fee penalty&#39;,
- &#39;virginamerica guy perfect always wervirgin&#39;,
- &#39;virginamerica thank y all good customer service leave industry&#39;,
- &#39;virginamerica give silver status month&#39;,
- &#39;virginamerica really wish you d fly fargo fargoairport fare amazing&#39;,
- &#39;virginamerica mood lighting point recline seat kickin foot&#39;,
- &#39;virginamerica flight schedule pm departure still say time plane gate update long delay&#39;,
- &#39;virginamerica group get cancel flightlation fee waive can not ticket book rep help either&#39;,
- &#39;virginamerica sign bonus enroll elevate&#39;,
- &#39;virginamerica get pm newark home la folk ewr incredible letsgohome&#39;,
- &#39;virginamerica morning question regard elevate point flight dm&#39;,
- &#39;virginamerica still wait see starryeyes_dev _&#39;,
- &#39;virginamerica wonder guy recieve dm able potentially respond asap&#39;,
- &#39;virginamerica fly lax sfo look awesome movie lineup actually wish long haul&#39;,
- &#39;virginamerica book town fares way restr httptcoxrdtovnl httptcoybyackc jenniferdawnpro&#39;,
- &#39;united thanks&#39;,
- &#39;united thank take care mr happy customer&#39;,
- &#39;united still refund word via dm please resolve issue cancel flightled flight useless assistant trip&#39;,
- &#39;united delay due lack crew delay there s long line deice still need improve service united&#39;,
- &#39;united thanks fill how s luck common&#39;,
- &#39;united eriord express connection hugely popular could eriewr hop&#39;,
- &#39;united even international flight glasgow us orlando newark mins&#39;,
- &#39;united think board flight au early think&#39;,
- &#39;united understand tough way get airport wo serious risk accident steep price&#39;,
- &#39;united gate agent hook alternate flight way prevent constant issue would rock&#39;,
- &#39;united fly glamco week long airport departure international domestic ta&#39;,
- &#39;united thanks&#39;,
- &#39;united thanks ticket&#39;,
- &#39;united law policy&#39;,
- &#39;united bad nonrefundable first class ticket oh select globalfc system auto select economy wupgrade&#39;,
- &#39;united cheertymedad buy tix day flight can not transfer tix flawed security logic flawed customer service&#39;,
- &#39;united start claim week unrealistic really suppose go long car seat childridiculous&#39;,
- &#39;united follow please airline beautifull&#39;,
- &#39;united do not i be sure united info system&#39;,
- &#39;united car seat lose united reimburse new one pair shoe necessity child&#39;,
- &#39;united submit response link send&#39;,
- &#39;united yes david allan send email number kmmvlkm case&#39;,
- &#39;united highbuddyyy totally suck cousin work phl say united&#39;,
- &#39;united want let know wonderful rosetta gate agent working flight dan ase let know wasappreciated&#39;,
- &#39;united yes paper voucher get january th&#39;,
- &#39;united begin feb call united say would send another voucher mail never get anything tiredofwaite&#39;,
- &#39;united internet great thing email executive company maybe respond timely manner&#39;,
- &#39;united need use chase united club pass yr old son come pass&#39;,
- &#39;united suppose number&#39;,
- &#39;united that s weak see ya hey virginamerica&#39;,
- &#39;united fly back w company since united do not early flight&#39;,
- &#39;united lose voucher give miami aeroport jan use&#39;,
- &#39;united trying book award september need flight aegeanairline show even w many award seat availab&#39;,
- &#39;united sure drive total hour get bag i d like explain debacle one want talk&#39;,
- &#39;united cheertymedad gee that s like almost care ppl think i be int trust adult w daughter&#39;,
- &#39;united see tell repeatedly pilot late flight keep get late flightr board defibrillator issue&#39;,
- &#39;united preferred security line anymore tsa precheck do not pull silverairways partner flight platinum spoil&#39;,
- &#39;united newarkliberty airport nee indicate different gate terminal ac flyingainteasy&#39;,
- &#39;united yes please newly marry try update last name preexist international flight seem easy&#39;,
- &#39;united united refuse reissue lose voucher plane do not take due mechanic badcustomerservice&#39;,
- &#39;united also run instruct shatter computer httptcooaflfrwxb&#39;,
- &#39;united yes we have agent last minute one agent rude thankfully ladan nice&#39;,
- &#39;united that s right overnight miami&#39;,
- &#39;united clients hr layover iah day claim recheck luggage take care&#39;,
- &#39;united try find loaner seat new use use car seat illegal accord safety regulation&#39;,
- &#39;united dme detail&#39;,
- &#39;united iah charlotte baggage claim rep latrice h customerservice non existent ignore customer inappropriately touch customer&#39;,
- &#39;united kewl also let know overhead bin row inop love good abbreve&#39;,
- &#39;united thanks helpgot need issue _ austrian guess sit awhile long&#39;,
- &#39;united uctraveladvisor would love respond website see really long form business new seat bad&#39;,
- &#39;united refund flight voucher another flight different airline expense today hour drive inconvenient&#39;,
- &#39;united receive call back daysit infant car seat suppose go anywhere child&#39;,
- &#39;united thanks concern contact customer care upon return australia&#39;,
- &#39;united well sit ground time wait gateagain tiredofthis&#39;,
- &#39;united airport snow removal method keep good work folk cessna become httptcovtmusjvu&#39;,
- &#39;united need guy book plane concern ill travel someone else move forward&#39;,
- &#39;united measly ecertificate appreciate loyal customer wait hrs tarmac ua unacceptable&#39;,
- &#39;united email addressusername signon available&#39;,
- &#39;united thank able claim interim expense cost stuff&#39;,
- &#39;united rude rude&#39;,
- &#39;united can not get board pass austrian airline codeshare flight rebook incls hour layover stick outside sec&#39;,
- &#39;united receive flight unite truly break guitars unitedbreaksguitar wantmymoneyback&#39;,
- &#39;united fly telaviv pay third suitcase do not even make plane besides impolite service&#39;,
- &#39;united bag still colo spring disabled search unfamiliar airport look bag good outcome&#39;,
- &#39;united shame there s flex ticket transfer rule even call neurosurgery icu be not enough&#39;,
- &#39;united denver say do not handle baggage make colo spring give number call help either&#39;,
- &#39;united guy need serious training customer service many well option put way guy handle ur mistake&#39;,
- &#39;united ord dca&#39;,
- &#39;united find problem avoid like plague tell can not find supervisor&#39;,
- &#39;united zccu cancel flight flight h advance nee connect flight reschedule link be not help help gf wait month see&#39;,
- &#39;united fly&#39;,
- &#39;united addition first flight delay hour i be arrive destination hrs late flight&#39;,
- &#39;united cancel flight flight do not rebook us add flight drive denver kcthanks&#39;,
- &#39;united announcement pre boarding address mobility disability require travel lot stuff preboard&#39;,
- &#39;united fly united last month experience awesome&#39;,
- &#39;united travel book thru united group dept okc ticket agent less willing help connection lax&#39;,
- &#39;united v upset disability service tell one employee carry medical equipment rude&#39;,
- &#39;united thnx quick reply do not think assist intl grp put considerable inconvenience today&#39;,
- &#39;united will not transfer flight ticket accompany yr old who s active military mom emergency brain surgery wow&#39;,
- &#39;united getmeontop week late flightr still receive mile mileageplus gift card starbucks card hand&#39;,
- &#39;united k i be always hope improvement&#39;,
- &#39;united yet complain guy check luggage throwing bag around unfortunate coincidence hope&#39;,
- &#39;united okc ticket agent roger mclarrensp less helpful intl group travel problem can not find supervisor help&#39;,
- &#39;united mobile apps need construction ground os category expensive get right&#39;,
- &#39;united another fail united ticket agent okc less helpful could care less problem american come&#39;,
- &#39;united also work wc coach good thing bird land ahead schedule use wc stat&#39;,
- &#39;united os be not control rather verizonwireless app new&#39;,
- &#39;united send email customer care telling may break sincerely hope help&#39;,
- &#39;united silly i be fly delta today united club staff attendant surly unhelpful always seem bothered pesky folk&#39;,
- &#39;united phone number can not find call flight reservation&#39;,
- &#39;united well can not fix miss buddy th bday negligence attempt make&#39;,
- &#39;united believe help customer service could not like say want number someone fix&#39;,
- &#39;united help baggage service desk say bc tsa screening fll bag make bag ewr&#39;,
- &#39;united mobile boarding pass disappear phone stand line board second time week hmm&#39;,
- &#39;united record rozana newark lovely helpful choosekind&#39;,
- &#39;united last night ordlga&#39;,
- &#39;united thx update&#39;,
- &#39;united thank&#39;,
- &#39;united dm nuts&#39;,
- &#39;united explain eager flight attendant try ask vision ccicanine guide dog&#39;,
- &#39;united what s point ask details servicedog book flight crew do not read continued&#39;,
- &#39;united try one available bogota everyone rude houston stick hour guy&#39;,
- &#39;united worstunitedflightsever ua las iad mechanical problem take land fix delay wtfodd&#39;,
- &#39;united despite bag make newark good informative email tracking update help&#39;,
- &#39;united what s go ua outbound flight last thurs delay hrs long delay worstunitedflightsever&#39;,
- &#39;united worstunitedflightsever ua iad las mechanical problem switch aircraft delay hour&#39;,
- &#39;united crash try check&#39;,
- &#39;united wow deal plus seat available easy change make customer happy&#39;,
- &#39;united thanks info already know&#39;,
- &#39;united airline trouble winter get good customer service contact httptcoaqjnhwnac negotiate resolution&#39;,
- &#39;united logan boarding gong show due lax carry enforcement bin full coat room bag u need well system&#39;,
- &#39;united thank&#39;,
- &#39;united blackmail pay extra return ticket nullified san francisco airport terrible service rep scam&#39;,
- &#39;united email address reach long dm&#39;,
- &#39;united disappoint u do not honor credit give ur mistake take business elsewhere&#39;,
- &#39;united ua still wait suppose depart&#39;,
- &#39;united credit last trip never come mail&#39;,
- &#39;united ok month wait hear airline give quite bit day request terrible service&#39;,
- &#39;united process ever end still wait reply since month pathetic customerservice&#39;,
- &#39;united what s go website i be flight booking problem three ticket today i have boot system umpteen time&#39;,
- &#39;united get account number website say email unavailable&#39;,
- &#39;united need book two one way order fly unaccompanied minor&#39;,
- &#39;united receive bag last night still miss one&#39;,
- &#39;united simonroesner you will need upgrade seat even economy plus like sit concrete bench&#39;,
- &#39;united pls help baby hannah get life saving surgery requiresshe need helppls donatert httptcokqnrrpa&#39;,
- &#39;united bet will not honour like mine ey&#39;,
- &#39;united nd flight also delay pilot board sit schedule&#39;,
- &#39;united guess that s much ask huh&#39;,
- &#39;united hard stay upset someone least try show remorse&#39;,
- &#39;united way simple apology go long way even hollow one obvious do not care wellbeing&#39;,
- &#39;united be not one time thing either shocking pattern repeat neglect disrespect&#39;,
- &#39;united fingers cross intact disappointed experience actually say enjoy use&#39;,
- &#39;united incredibly easy fix would rather stay comfort zone get force mine&#39;,
- &#39;united july zero excuse outofdate system cause problem like&#39;,
- &#39;united everyone around us sit friend family member book ticket october december buy&#39;,
- &#39;united sure talk go nonstop flight sna sfo sfo ewr&#39;,
- &#39;united i be move americanair united talk service&#39;,
- &#39;united please good weekend&#39;,
- &#39;united ask legitimate question systemwide vs localized problem get back unrelate flightd copypaste well&#39;,
- &#39;united time call need ski go airport get faith united&#39;,
- &#39;united see guy amazing one company continually make mistake yet fail hold accountable error&#39;,
- &#39;united tourist wonder super tides tide century french uk coast httptcogxdqortss&#39;,
- &#39;united yeah sorry there s always problem united international reputation problem&#39;,
- &#39;united y all probably work&#39;,
- &#39;united maybe bbbne_sd_ks_ia would care hear go whoever listen issue cause&#39;,
- &#39;united wonder share fb insta would produce number character really limit story tell&#39;,
- &#39;united you be tell number call leave airport negligent pilot staff&#39;,
- &#39;united could email resent do not appear arrive&#39;,
- &#39;united yes please try get pop newark&#39;,
- &#39;united follow order dmcome&#39;,
- &#39;united united coupon make broken entertainment system hour flight seriously ridiculousness learncustomerservice&#39;,
- &#39;united do not drop bag overnight i be leave week suppose hold bag&#39;,
- &#39;united dm detail still response book today&#39;,
- &#39;united know probably way get cheap airfare ticket flight leave hour&#39;,
- &#39;united someone please explain process happen property find plane passenger leave heathrow&#39;,
- &#39;united able dm confirmation number&#39;,
- &#39;united i have send message let know get i be twitterliterate also really go stuck hrs&#39;,
- &#39;united unhappy response complaint email nd feb ref awful customer service&#39;,
- &#39;united dm work&#39;,
- &#39;united private jet would cool work ill try&#39;,
- &#39;united give option use united travelbank recent flight booking problem help use recouping fund thank&#39;,
- &#39;united common keep paper work ready do not delay flightsand meeting choosechicago&#39;,
- &#39;united yulord&#39;,
- &#39;united yep that s correct get email flight cancel flightle do not matter flight atl delay thx&#39;,
- &#39;united k problem get fll iah send dm make connection please let know&#39;,
- &#39;united do do&#39;,
- &#39;united thanks send&#39;,
- &#39;united i be ground montreal ua miss connection ua st louis helpdo private jet&#39;,
- &#39;united i be frustrate nervous&#39;,
- &#39;united ones make difficult&#39;,
- &#39;united i be child i be someone issue fly prepare ahead time reduce distress cause plane&#39;,
- &#39;united get cancel flightled hour take&#39;,
- &#39;united always happen guy make travel incredibly stressful uncomfortable good business&#39;,
- &#39;united someone severe anxiety one person help be not next&#39;,
- &#39;united i be seek go client bc u can not get need refund fill form confident work past indication&#39;,
- &#39;thnx response united bot seem improvement could easily attain st class service really worth&#39;,
- &#39;united unrivalled access california flight us uk airport nonstop onestop connections yearround&#39;,
- &#39;united book award tix thaiairways i be see conf united flight booking problem get get thai&#39;,
- &#39;united luckily make flight time disappoint lack communication&#39;,
- &#39;united check see flight atlord get cancel flighted&#39;,
- &#39;united service far horrid want end trip high note guess that s option&#39;,
- &#39;united book flight home month ago request seat together fiance get middle seat unacceptable&#39;,
- &#39;united guys horrible&#39;,
- &#39;united thnx info&#39;,
- &#39;united pay wifi international business ticket pennypincher&#39;,
- &#39;united ok top thing you have lose luggage could get bad unitedairline&#39;,
- &#39;united kudos cancel flightle flight dfw morning united usually first panic&#39;,
- &#39;united luggage broken youcouldntmakethi brokenwheel&#39;,
- &#39;united flight dfw ord currently ontime see advisory dfw may affected weather&#39;,
- &#39;united maybe one day you will one quote httptcomjkpgvxmpc&#39;,
- &#39;united flight delayedno one remember turn heat flight leave ordseriously&#39;,
- &#39;united another awesome new plane flight extremely nice captain steve connolly&#39;,
- &#39;united speak real person get resolve politely efficiently&#39;,
- &#39;united have not file refund claim tell charge dm dispute bank hence would like&#39;,
- &#39;united bags make flight iad second day without clothe pretty inconvenient pretty curious unitedairline&#39;,
- &#39;united every united flight saipan guam adventure never know capeairs old plane operational&#39;,
- &#39;united hence i have ask customer service phone number speak real person get sort&#39;,
- &#39;united bags leave washington yet would convenient seeing leave day ago unitedairline lostluggage&#39;,
- &#39;united i be fly st class one leg chicago long flight china still able use lounge chicago&#39;,
- &#39;united accord dms i be owe refund please may provide contact number go bank file claim&#39;,
- &#39;united hour ago need work bag make hotel time nee go elsewhere&#39;,
- &#39;united okay thank&#39;,
- &#39;united i have file claim way call update another way&#39;,
- &#39;united pls properly train agent request speak k customer service transfer dead end even open hr&#39;,
- &#39;united thanks remember load bag onto connect flight oh wait forget iceland fun clothe&#39;,
- &#39;united thank cheese platter abundance entertainment option time fly&#39;,
- &#39;united customer service atrocious disrupt travel plan lose luggage impossible talk human&#39;,
- &#39;united terminal mia food open esp flight two hour early like recommend can not eat&#39;,
- &#39;united ua flight i be currently stick portland miss ride hour delay getmartyhome&#39;,
- &#39;united respond various request contact number anyone know uk customer service number unitedairline&#39;,
- &#39;united look get bag lusaka&#39;,
- &#39;united could update suitcase please online phone tracking tell nothing tell i d back yesterday&#39;,
- &#39;united thank try two day set&#39;,
- &#39;united last thing u guy should not charge drink transatlantic flight&#39;,
- &#39;united lhr arrival lounge fail wait mins shower leave find hotel u know many passenger u carry planning&#39;,
- &#39;united luck finalizing reservation dmd information please let know else need want confirm asap thx&#39;,
- &#39;united complete form doubt use ua do not care day vacation sure ua will not feel responsibility&#39;,
- &#39;united definitely compliment really think bag lose send another airport end happy customer&#39;,
- &#39;united thanx much follow emailed ticket voucher unitedairline care&#39;,
- &#39;united definitely trip remember ewrsti second season first seat pay loyal&#39;,
- &#39;united nope tell us time go home sleep airport even though assure us would get room&#39;,
- &#39;united keep update let know bag make flight jburg&#39;,
- &#39;united back expensive holiday work year pay ruin want compensation original case back&#39;,
- &#39;united thanks united understand would actually like bag back do also want money&#39;,
- &#39;united frankly bad customer service ever problem happen deal define company never unite&#39;,
- &#39;united still valid flight seem strange delay late flight inbound crew hour plane already&#39;,
- &#39;united thanks lack help can response k desk&#39;,
- &#39;united bad ua another unforeseeable operational issue return flight&#39;,
- &#39;united would like know what s go current flight land&#39;,
- &#39;united pay luggage deliver arrive wait additional day delivery&#39;,
- &#39;united hotel people feel like hold hostage someone board pass can not leave fail&#39;,
- &#39;united one great airline&#39;,
- &#39;united outbound bags lbs bag return home bag lbs logic writing machine human help require&#39;,
- &#39;lindaswc united do not like hear poor experience please share detail wour customer care team httptcohiscndmgz&#39;,
- &#39;united cancel flightn leave us fend flt come late flight get runaround hrs employee blame previous&#39;,
- &#39;united local united number malaysia local united airlines kuala lumpur kul&#39;,
- &#39;united okay asem find luggage&#39;,
- &#39;united agent meet us gate say issue wdelay ua would taken online&#39;,
- &#39;united send urgent message via eserviceunitedcom bgkwm narayanan please respond asap also local united tel kul&#39;,
- &#39;united thanks guy get anytime soon&#39;,
- &#39;united lady one phone say tel aviv tel aviv united say newark one know nothing&#39;,
- &#39;united melaniespre well see ^kn run plane running thank help&#39;,
- &#39;united yes still answer many luggage day unacceptable&#39;,
- &#39;united go nothing like always&#39;,
- &#39;united send feedback thank&#39;,
- &#39;united plus food taxi&#39;,
- &#39;united offer us room people fail&#39;,
- &#39;united people get pretty tired action solve problem plus miss day vacation skiing&#39;,
- &#39;united bright side would keep promise make hope you be good night thank&#39;,
- &#39;united yes&#39;,
- &#39;united take back comment team work hard help us far solution hotel food anything fail&#39;,
- &#39;united arrive two hour late flight clt sitting tarmac move plane gate unhappy customer&#39;,
- &#39;united airlines absolute bad idea neveragain unitedairline&#39;,
- &#39;united thank may want fix line customer care team currently respond inquiry within business day&#39;,
- &#39;united fly united aus austin bergstrom cancun intl good flight ever big small&#39;,
- &#39;united frustrating frequent flyer loyal since continental upgrade equal pay time top purchase ticket&#39;,
- &#39;united deep vein thrombosis&#39;,
- &#39;united bad can not figure pack plane screw connectns claims hotl room san fran strand pax way go&#39;,
- &#39;united passengers hour delay flight leave hotel end night hou airport wtf httptcozfqmpgxvs&#39;,
- &#39;hey united flight iah pos leave late flight one back iah early rather get pos early&#39;,
- &#39;united lose bag process break agent promise they d call hold bag find they be wake w delivery fail&#39;,
- &#39;united people counter helpful see nobody flight austin still sit&#39;,
- &#39;united unfortunately still tarmac flyohare definitely miss ride flypdx gonnabealongnight&#39;,
- &#39;united darquenloveli regret hear please let us know need assistance ^kn finally able secure seat thx&#39;,
- &#39;united time check open flight ua manchester newark today&#39;,
- &#39;united good know open closed door premier passenger safety briefing delay flight annoy&#39;,
- &#39;united dm send&#39;,
- &#39;united yea get phoenix already delay day people bullshit&#39;,
- &#39;united consolation staff stellar hour delay encounter every one flight&#39;,
- &#39;united flight ua gate b tell ray somehow make flight iah do not wait one&#39;,
- &#39;united that s unfortunate tumitravel xmas gift look like razor rip right front pocket picture&#39;,
- &#39;united thanks ask&#39;,
- &#39;united lose bag cancel flightled flight delhi call centers poor united staff spread thin stress name&#39;,
- &#39;united yes do not make mistake less absurd do not change fact i be inconveniently miss luggage tonight&#39;,
- &#39;united i be constantly challenge upgrade charge order prevent dvt pay addtl httptcoxcjqrb&#39;,
- &#39;united ord wait min crew member leave gate item come flight attendant sarcastically say good luck walk away&#39;,
- &#39;united follow back please ill happily dm link i d rather share travel plan publicly&#39;,
- &#39;united&#39;,
- &#39;united favorite airline&#39;,
- &#39;united seriously fail make stranger share room&#39;,
- &#39;united luke_mcintosh nah would not&#39;,
- &#39;united need asap make today flight&#39;,
- &#39;united agent split reservation can not cancel flight refund credit wks&#39;,
- &#39;united vacations go ruin w day rain change fee us nearly cost original flight help&#39;,
- &#39;united send message let know asap&#39;,
- &#39;united would make share room&#39;,
- &#39;united try call w min phn wait mean we d miss option anyway&#39;,
- &#39;united ask guy flight bwi wait us get delay flight san diego pretty please&#39;,
- &#39;united still wait find rep work hard upset wait tomorrow pm get mammoth&#39;,
- &#39;united early flt think call appropriate yes review nada avail next day expect full refund&#39;,
- &#39;united understand thank&#39;,
- &#39;united ask call get fix tweet bs question stall make thing bad phone number please&#39;,
- &#39;united yo yo yo stuck tarmac hour flyohare go miss ride flypdx help please helpimstuck united&#39;,
- &#39;united highly unprofessional overbook flight seat feel rearrange schedule mismanagement&#39;,
- &#39;united well consider every agent claim unable help everything else waste time hear call corp&#39;,
- &#39;united man can not wait book ticket thank jp you be life sabe&#39;,
- &#39;united ice totally understand large number us face hour time overnight cancel flightation seem like&#39;,
- &#39;united flt cancel flightle get email happen courtesy phn call book diff airline city&#39;,
- &#39;united tag number let find bag&#39;,
- &#39;united well train support staff appropriate decorum consider revisit terrible provide death certificate policy&#39;,
- &#39;united well bar set low guy really good apology game change u guy learn&#39;,
- &#39;united post disappointment i be frequent united flyer simple bad apple do not spoil bunch&#39;,
- &#39;united guy continue impress houston httptcocihqnllcm&#39;,
- &#39;united way make phone call nee handle via twitteremailweb thank&#39;,
- &#39;united please help ethiopia adopt two year old child exist confirmation need add child reservation&#39;,
- &#39;united questionare onboad volt outlet plane&#39;,
- &#39;united website deserve new design html ftw&#39;,
- &#39;united thanks eff holiday miss full day ski due baggage team incompetence flyyow&#39;,
- &#39;united twitter be not let dm&#39;,
- &#39;united hope&#39;,
- &#39;united agent help person front finish walk away guy behind shocked&#39;,
- &#39;united connection ord exact plane check carryon apparently take leave chicago pretty ridiculous&#39;,
- &#39;united encourage ill cpap tonight&#39;,
- &#39;united yes file claim soon carousel stop without bag get email find sche delivery&#39;,
- &#39;united idea monitor mileage member travel pattern enough know change jobslose statusand make transition easy&#39;,
- &#39;united delay dencle manually enter baggage tag really bad cust service day ker friendlyskie&#39;,
- &#39;united tell us flight delay tell us time min spare do not say delay unless you be sure&#39;,
- &#39;united yes lusaka zambia guess bag never make plane iad&#39;,
- &#39;united flight voucher&#39;,
- &#39;united late flight denver late flight newarklet even get disaster checking bag unacceptable&#39;,
- &#39;united let do not think i have ever fly problem bad airline period&#39;,
- &#39;united yes file claim hope receive luggage ridiculous purchase item go sleep reimbursement&#39;,
- &#39;united ua ordlhr bag load min late flight frigid air cabin plane feel like fall apart upgrade long haul fleet&#39;,
- &#39;united flight attendant never serve beverage tea check give ua notcool&#39;,
- &#39;united load balancing system apparently systemwide major impact united airlines flight cyberattack&#39;,
- &#39;united unscheduled refuel stop miss connect flight r home n look ward bed big pbj sandwich&#39;,
- &#39;united americanair spend hundred rectify situation guy go quiet&#39;,
- &#39;united ua sit ewr nearly hour ske pilot say computer clue leave help&#39;,
- &#39;united americanair that s end come travel literally extra day half&#39;,
- &#39;united make upgrade list fly st tomorrow min first time ever statusmatchpaidoff httptcoatfrkpgoy&#39;,
- &#39;united refund us vacation get free room night make make us sleep dia&#39;,
- &#39;united thanks reminder fun ride httptcoppvarchf&#39;,
- &#39;united receive luggage also look left snow arrive i be ask people refund&#39;,
- &#39;united updated aircraft wifi device entertainment outlet do not get charge device&#39;,
- &#39;united one scan inside plane ask people line around plane go&#39;,
- &#39;united gate change two delay even crew think airline suck&#39;,
- &#39;united i be frustrated waste day due equipment failure&#39;,
- &#39;united computers stop give update take flight info app that s ridiculous keep people update&#39;,
- &#39;united soooo day you have offer response assume poor treatment gate agent norm&#39;,
- &#39;united terrific many thank look forward back ua tomorrow great flight vancouver&#39;,
- &#39;united calls result hrs hold time day wait check suspect code share fare nothing investigatedmy time waste&#39;,
- &#39;united taken week cust care respond case request refund wifi working get update&#39;,
- &#39;united appreciate effort get home&#39;,
- &#39;united that s corrective spend hour try book online receive error click final purchase button&#39;,
- &#39;united today fine could prevent one gate agent advise passenger&#39;,
- &#39;united real deal delay flight ua denver vegas&#39;,
- &#39;united ua madrid arrive agent mass confusion send fro ua employee maryjo rude unhelpful&#39;,
- &#39;united system failure bad trend software project like fly airplane there s thing emergency takeoff&#39;,
- &#39;united lots report system failure delay flight last week currently sit tarmac ogg hour&#39;,
- &#39;united reboot chicago dispatch system need pivotalcf i be tired sitting plane&#39;,
- &#39;united despite shaky connection look like ill get home tonight great job united touch go&#39;,
- &#39;united httptcohjkqchn however completely controlthe price still display httptcohjkqchn&#39;,
- &#39;united aircraft close gate flight one close gate go chicago&#39;,
- &#39;united tell file claim clothing purchase&#39;,
- &#39;united comically return flight ase two united flight board adjacent gate clear plane board&#39;,
- &#39;united grkm file reference&#39;,
- &#39;united wouldhow contact discuss poor experience customer service would give shoot&#39;,
- &#39;united ua pacific rim date night cut constantly randomly one spot repeatably&#39;,
- &#39;united try since file report&#39;,
- &#39;united send email bad experience send back generic response yet another reason ill never fly&#39;,
- &#39;united mom leave kindle flight today burgundy case light seat anyone find&#39;,
- &#39;united ticket please refund unnecessary upgrade fee&#39;,
- &#39;united horrible lose carseat expect us use loner carseat safety regulation say illegal use use car seat&#39;,
- &#39;united thank&#39;,
- &#39;decision decisions mandarinjourney united we d love try service offer status match httptcoxbqqqbrgvf ^kp&#39;,
- &#39;need info unite momsgoodeat great amenity kit pjs include status match aa ^kp&#39;,
- &#39;united do not care thehipmunk link show wrong price siteit site responsibility ensure correctness&#39;,
- &#39;united flights lie flat seating stl pdx around date march&#39;,
- &#39;united need get home th they be tell it will th night compensation anything do&#39;,
- &#39;united mllovelace baggage fee waive premier member please see httptcouduwmde ^jp what s point membership&#39;,
- &#39;united wonderful bag claim people finally bag catch early flight original flight land wastedtime&#39;,
- &#39;united dmed thank&#39;,
- &#39;united thanks well touch&#39;,
- &#39;united thanks karen salisbury iah amazing customer service find daughter bag lose ua make day&#39;,
- &#39;united days late flightr bag leave iad united help everyone tell different story&#39;,
- &#39;united renoairport hi direct flight houston reno begin do not see day march&#39;,
- &#39;united like continental chicken feat fair&#39;,
- &#39;united assist current flight status flt dfw tomorrow&#39;,
- &#39;united leave comment customer care thank contact&#39;,
- &#39;united lose gate check bag den ord direct flight ugh&#39;,
- &#39;united caught early flight ord gate check bag you have lose ohare original flight land minute frustrating&#39;,
- &#39;yes thank much united whitterbug see speak reservation team they have reinstate flight thank ^ey&#39;,
- &#39;united captain behalf front office welcome board never hear laughedhard funnycaptain&#39;,
- &#39;united please follow dm miss bag&#39;,
- &#39;united clear luggage comment reference photo attach flight jac httptcopnbajfkmhg&#39;,
- &#39;united great fare&#39;,
- &#39;united leave item plane call non stop one answer please help&#39;,
- &#39;united awesome ill book next christmas vacatinn december way want devalue mileage plus&#39;,
- &#39;united what s good number call speak someone fix people luggage saturday&#39;,
- &#39;united thank u secured room night thx helpful customer service rep n dorn thank u goodenoughmother&#39;,
- &#39;united where s damn bag&#39;,
- &#39;united well someone tell employee denver baggage claim still bag&#39;,
- &#39;united greetings ua club member idea use air canada lounge yvr fly ua tomorrow&#39;,
- &#39;united mexico international us&#39;,
- &#39;united divert miss connect flight tell bag way msy people care&#39;,
- &#39;united male agnt las threaten canadian cust cust take pic gate agent announce can not help rebook friendlyskie&#39;,
- &#39;united apollochplayers want go home tonight cancel flight last leg reserv wout permission phrps&#39;,
- &#39;united stress rude agent overwhelm delyd flight lasden yell several people pretty friendlyskie&#39;,
- &#39;united land boston last night hour travel rough tho&#39;,
- &#39;united fail cancel flightled flight frm gjt use reserv home iah sea reflight booking problem wout permission phrps&#39;,
- &#39;send thank u rt united goodenufmother please dm confirmation number reflight booking problem need thank ^ey&#39;,
- &#39;united make fly list airline wait connector late flight stick iah&#39;,
- &#39;united what s deal u provide voucher overnight cozy floor ohare gross helpmeplease anyonethere&#39;,
- &#39;united also mere fact go online issue statement vice call talk directly one good example&#39;,
- &#39;united thank fly newark vaileagle&#39;,
- &#39;united weekend deal company would say otherwise&#39;,
- &#39;united httptcohpsqvrjk flight go get plane businesstravel goodenoughmother&#39;,
- &#39;united proper response sorry wait flight look issue that s delta would handle&#39;,
- &#39;united customer service terrible stand inline hour flight hour late flightr still bagdisgutedindenver&#39;,
- &#39;united please upload march ondemand entertainment listing website&#39;,
- &#39;united inadequate accident&#39;,
- &#39;united reebok rockinwellness denver international airport httpstcotkvmhbkec&#39;,
- &#39;united thank respond quickly helpful tool dustyob&#39;,
- &#39;united boarding time show min gate agent start show check bag httptcozcbjyolsn&#39;,
- &#39;united agent las let customer know can not help rebook delay flight den unfriendlyskie httptcoquzvmkrtr&#39;,
- &#39;united empathizes w disappointment stclass flight wnonworking entertainmnt worth unfriendlyskies httptcoloecogmvd&#39;,
- &#39;united do not work&#39;,
- &#39;united see message today mcdonnell douglas dc model hear read goodnight&#39;,
- &#39;united search mileage ticket bom could not find single one saver award see play earn mile can not use&#39;,
- &#39;united flight arrive minute early wait hour bag&#39;,
- &#39;united that s issue fact one even call despite promise confirm bag location&#39;,
- &#39;united what s girl get to get flight name change buy one mean ex boyfriend need girl trip stat&#39;,
- &#39;united thank sign notification shall watch wait&#39;,
- &#39;united still wait hear back wallet steal one plane would appreciate resolution&#39;,
- &#39;united would love someone could get back austin tonight wish wait til tomorrow morning&#39;,
- &#39;united flysaa lost baggage hear different thing different employee united flysaa say nothing&#39;,
- &#39;united cs think mile repair damage do interesting travel united exp bad flight ever&#39;,
- &#39;united flight dfw tuesday far advance give notice cancel flightle&#39;,
- &#39;united sign notification first trip update sure happen&#39;,
- &#39;united thank take care everything make right that s experience i be use open app find flight change&#39;,
- &#39;united line response i be wait tomorrow morning flight overbooke&#39;,
- &#39;united take exact aircraft lax day ago fit problem agent today tell nonsense policy change&#39;,
- &#39;united helpful agents club help baggage fee night lifestop business silverairway&#39;,
- &#39;united never hear httptcoqdebyahqfm&#39;,
- &#39;southwestair do not charge ticket change fee incur mysterious cost incur united&#39;,
- &#39;united exhausted frustrated link fb post abt travel issue httpstcolarkcvcs&#39;,
- &#39;united deny get plane wo get chance prove fit i be rookie read bio&#39;,
- &#39;united that s exactly point fit i be premier access boarding group return ticket i have yrs&#39;,
- &#39;united i have never experience bad customer service place blame codeshare partner assume responsibility unacceptable&#39;,
- &#39;united currently board check terrible staff rude expensive luggage throw around etc&#39;,
- &#39;united fucked void ticket keep money even apology never fly airline unitedairline&#39;,
- &#39;united bad customer svcs kevin rep call center must investigate baggage lose there s help argument&#39;,
- &#39;united sell ticket silverairways httptcoonhxhcobk terrible service ua staff can not reach silver&#39;,
- &#39;united get demote gold cuz hubby get pqd tho enuf spend goldsspousaldiscriminationangry&#39;,
- &#39;united thank&#39;,
- &#39;united direct flights belfast intl newark resume winter break thank&#39;,
- &#39;united favorite way travel thank httptcovgnxckg&#39;,
- &#39;united yes awful weather appear get home&#39;,
- &#39;united yes lots terrible customer service newark despite raise complaint ignore hence tweet&#39;,
- &#39;united lovely new plane lga ord power outlet&#39;,
- &#39;united tweet i d number will not reveal home address anyone web&#39;,
- &#39;united file delayed bag report saturday flight cancel flightle never go anywhere&#39;,
- &#39;united person currently bettween gate lax&#39;,
- &#39;united need lands ewr baggage claim file send employee droppeditoffyet&#39;,
- &#39;united rarely cease amazefor bad hope last time fly&#39;,
- &#39;united thank quick response can not dm follow well&#39;,
- &#39;united icloud yet please help&#39;,
- &#39;united need phone number baggage claim lax mom leave phone someone call say would put&#39;,
- &#39;united response back&#39;,
- &#39;united atrocious customer service&#39;,
- &#39;united honor absurdly low mistake fare httptcozjvilw va usatoday&#39;,
- &#39;united albanyairport delay departure check bag gate claim space fill walk open spaces delay poorcustomerservice&#39;,
- &#39;united cancel flight flight reason phone hour vacation&#39;,
- &#39;united dfpietra that s response shake head back forth tsk betterfrom customer service apology&#39;,
- &#39;united thanks k mile rtb europe multiple destination could stop us wayway back mileage diff&#39;,
- &#39;united course bag frustrated&#39;,
- &#39;united bad avoid like plague&#39;,
- &#39;united bad airline world&#39;,
- &#39;united someone need dm resolve correctly extremely disappoint service receive terrible management&#39;,
- &#39;united premier gold desk change flight waif fee give wrong flight jana acosta salt lake refuse service angry&#39;,
- &#39;united give one thing consistent unfortunately consistent job well alwaysdelayedonunite&#39;,
- &#39;united right i be angry&#39;,
- &#39;united first time fly united also last time terrible back virginatlantic branson virginatlantic unitedairline&#39;,
- &#39;united use committed continentalairline flyer merger remember switch southwestair communicationfail&#39;,
- &#39;united least could offer ticket coach instead cancel flight reservation glitch notfair&#39;,
- &#39;united i be say make flight poornoncommunication unaccounted lose time lot frustrate flyer stand around&#39;,
- &#39;united think dm would well&#39;,
- &#39;united gate announcement states delay due maintenance yet app say late flight arrive aircraft tell truth unfriendly&#39;,
- &#39;united easily bad company ever experience lose someone personal possession could not care less&#39;,
- &#39;united app show arrive aircraft early depart flight delay due late flight arrive aircraft unfriendly&#39;,
- &#39;united already airport hrs late flightr still guy really kill today try stay positive&#39;,
- &#39;united uniteds service level reach etihad let realistically lufthansa ill consider&#39;,
- &#39;united really someone call sick someone forget call replacement hour late flight take theworst&#39;,
- &#39;united ask flight attendant typical compensation would say may get free tv unacceptable&#39;,
- &#39;united do&#39;,
- &#39;united thank ^jh appreciate prompt responsesme passenger&#39;,
- &#39;united disappointment today simply put rather unpleased thing currently flight delay can not wait get home&#39;,
- &#39;united round trip nonenglish speak friend strand twice hour time staff member rude&#39;,
- &#39;united find group people actually hate people isis that s right united airlines&#39;,
- &#39;united nope walk orf terminal united agent find show last minute board us many panicked people&#39;,
- &#39;united thank&#39;,
- &#39;united time finally get dallas could drive less frustration cheap&#39;,
- &#39;united i be try get final destination need compensation hrs personal time waste&#39;,
- &#39;united guy really customer service cluecould spend effort clearing bin rollerboard instead art project mine&#39;,
- &#39;united priority iove&#39;,
- &#39;united please premier platinum&#39;,
- ...]</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">analyzer</span> <span class="o">=</span> <span class="s2">&quot;word&quot;</span><span class="p">,</span>
@@ -15804,7 +14773,7 @@ max        44.000000
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15828,7 +14797,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">stemmed_df</span><span class="p">[</span><span class="n">airline_sentiment</span><span class="p">]</span>
@@ -15847,7 +14816,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tfid_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">max_features</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
@@ -15869,7 +14838,7 @@ max        44.000000
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
 
@@ -15897,7 +14866,7 @@ max        44.000000
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forest</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
@@ -15924,65 +14893,65 @@ max        44.000000
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.3s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.0s finished
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.5s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.4s finished
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    4.5s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.8s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.0s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.0s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.1s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.0s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.0s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.1s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.3s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.7s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.2s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.6s finished
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    4.8s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.9s finished
 [Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
 [Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
 [Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
 [Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.4s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.9s finished
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.5s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.8s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.1s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.2s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.4s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.3s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.8s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.6s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.4s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.4s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.5s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.2s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.5s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.2s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.2s finished
 [Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
 [Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
 [Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
 [Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.1s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.3s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.0s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.1s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.0s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.3s finished
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    7.4s finished
 [Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
 [Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
 [Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
@@ -15997,14 +14966,14 @@ max        44.000000
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>building tree 1 of 100building tree 2 of 100building tree 3 of 100
+<pre>building tree 1 of 100building tree 2 of 100building tree 3 of 100building tree 4 of 100
+building tree 5 of 100building tree 6 of 100
 
-building tree 4 of 100
-building tree 5 of 100
 
-building tree 6 of 100
-building tree 7 of 100
-building tree 8 of 100
+building tree 7 of 100building tree 8 of 100
+
+
+
 building tree 9 of 100
 building tree 10 of 100
 building tree 11 of 100
@@ -16031,8 +15000,8 @@ building tree 31 of 100
 building tree 32 of 100
 building tree 33 of 100
 building tree 34 of 100
-building tree 35 of 100
-building tree 36 of 100
+building tree 35 of 100building tree 36 of 100
+
 building tree 37 of 100
 building tree 38 of 100
 building tree 39 of 100
@@ -16098,7 +15067,7 @@ building tree 98 of 100
 building tree 99 of 100
 building tree 100 of 100
 RandomForestClassifier(n_jobs=-1, verbose=2)
-0.7204918032786886
+0.7189890710382514
 </pre>
 </div>
 </div>
@@ -16115,7 +15084,7 @@ RandomForestClassifier(n_jobs=-1, verbose=2)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forest</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span><span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
@@ -16144,11 +15113,11 @@ RandomForestClassifier(n_jobs=-1, verbose=2)
 <pre>building tree 1 of 100building tree 2 of 100building tree 3 of 100
 building tree 4 of 100building tree 5 of 100building tree 6 of 100
 
+
+
+
 building tree 7 of 100
 building tree 8 of 100
-
-
-
 building tree 9 of 100
 building tree 10 of 100
 building tree 11 of 100
@@ -16181,8 +15150,8 @@ building tree 37 of 100
 building tree 38 of 100
 building tree 39 of 100
 building tree 40 of 100
-building tree 41 of 100
-building tree 42 of 100
+building tree 41 of 100building tree 42 of 100
+
 building tree 43 of 100
 building tree 44 of 100
 building tree 45 of 100
@@ -16223,8 +15192,8 @@ building tree 79 of 100
 building tree 80 of 100
 building tree 81 of 100
 building tree 82 of 100
-building tree 83 of 100
-building tree 84 of 100
+building tree 83 of 100building tree 84 of 100
+
 building tree 85 of 100
 building tree 86 of 100
 building tree 87 of 100
@@ -16234,8 +15203,8 @@ building tree 90 of 100
 building tree 91 of 100
 building tree 92 of 100
 building tree 93 of 100
-building tree 94 of 100building tree 95 of 100
-
+building tree 94 of 100
+building tree 95 of 100
 building tree 96 of 100
 building tree 97 of 100
 building tree 98 of 100
@@ -16255,11 +15224,11 @@ RandomForestClassifier(n_jobs=-1, verbose=2)
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.7s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.6s finished
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.6s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.8s finished
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.4s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.2s finished
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.5s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.7s finished
 [Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
 [Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
 [Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
@@ -16270,50 +15239,50 @@ RandomForestClassifier(n_jobs=-1, verbose=2)
 [Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
 [Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.3s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.4s finished
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.6s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.9s finished
 [Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
 [Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
 [Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
 [Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.6s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.5s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.7s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:   10.3s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.6s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.7s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.9s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:   11.0s finished
-[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
-[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
-[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
-[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
-[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.3s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.4s finished
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.9s finished
 [Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
 [Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
 [Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
 [Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.5s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.5s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.6s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:   10.2s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    3.1s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:   10.1s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.8s
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    9.5s finished
+[Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
+[Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.4s
 [Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.5s finished
 [Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
 [Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
 [Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
 [Parallel(n_jobs=-1)]: Using backend LokyBackend with 8 concurrent workers.
 [Parallel(n_jobs=-1)]: Done  25 tasks      | elapsed:    2.5s
-[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.7s finished
+[Parallel(n_jobs=-1)]: Done 100 out of 100 | elapsed:    8.8s finished
 [Parallel(n_jobs=8)]: Using backend ThreadingBackend with 8 concurrent workers.
 [Parallel(n_jobs=8)]: Done  25 tasks      | elapsed:    0.0s
 [Parallel(n_jobs=8)]: Done 100 out of 100 | elapsed:    0.0s finished
@@ -16330,9 +15299,10 @@ RandomForestClassifier(n_jobs=-1, verbose=2)
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h5 id="6.-Summarize-your-understanding-of-the-application-of-various-pre-processing-and-vectorization-and-performance-of-your-model-on-this-dataset">6. Summarize your understanding of the application of various pre-processing and vectorization and performance of your model on this dataset<a class="anchor-link" href="#6.-Summarize-your-understanding-of-the-application-of-various-pre-processing-and-vectorization-and-performance-of-your-model-on-this-dataset">&#182;</a></h5><p>kinda hard to see, but we have scores:</p>
 <p>count: 0.7204918032786886</p>
-<p>0.7165300546448088</p>
+<p>tfid: 0.7165300546448088</p>
 <p>Before running this, i expected to the count to perform better, but i didnt expect it to be this close. I had thought since we were measuring the sentiment and of the
-tweets, that counting the number of words in a tweet seems to be a more natural way of measuring whether or not that tweet has a positive, neutral or negative sentiment.</p>
+tweets, that counting the number of words in a tweet seems to be a more natural way of measuring whether or not that tweet has a positive, neutral or negative sentiment.
+versus assigning a score on teh document as a whole</p>
 
 </div>
 </div>
